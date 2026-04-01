@@ -43,7 +43,7 @@ export default function About() {
           <div className="about-image-wrap">
             <div className="about-avatar">
               <img
-                src="/img/unmeshprofilepic.jpeg"
+                src={`${import.meta.env.BASE_URL}img/unmeshprofilepic.jpeg`}
                 alt="Unmesh Jathar"
                 className="avatar-img"
               />
