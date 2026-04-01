@@ -89,6 +89,28 @@
   font-size: 0.875rem !important;
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 1px solid $border;
+  border-radius: 8px;
+  color: $text-muted;
+  cursor: pointer;
+  transition: $transition;
+  margin-left: 8px;
+  flex-shrink: 0;
+
+  &:hover {
+    color: $primary-light;
+    border-color: $primary;
+    background: rgba($primary, 0.1);
+  }
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -124,7 +146,6 @@
   .hamburger {
     display: flex;
   }
-
   .nav-links {
     position: fixed;
     top: 0;

@@ -1,0 +1,265 @@
+// ─── Modern SaaS Theme (Vercel / Linear inspired) ────────────────
+// Applied when <html data-theme="saas">
+
+[data-theme="saas"] {
+  // ── Base ──────────────────────────────────────────
+  body {
+    background: #000 !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0070f3 !important;
+  }
+
+  // ── Navbar ────────────────────────────────────────
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.95) !important;
+    border-bottom-color: #1a1a1a !important;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  .nav-link.active::after {
+    background: #0070f3 !important;
+  }
+
+  // ── Buttons ───────────────────────────────────────
+  .btn-primary {
+    background: #0070f3 !important;
+    box-shadow: 0 4px 15px rgba(0, 112, 243, 0.4) !important;
+
+    &:hover {
+      background: #0061d5 !important;
+      box-shadow: 0 8px 25px rgba(0, 112, 243, 0.55) !important;
+    }
+  }
+
+  .btn-outline {
+    border-color: #2a2a2a !important;
+    color: #ccc !important;
+
+    &:hover {
+      background: #111 !important;
+      border-color: #444 !important;
+      color: #fff !important;
+    }
+  }
+
+  .btn-ghost {
+    border-color: #1a1a1a !important;
+    color: #666 !important;
+
+    &:hover {
+      border-color: #333 !important;
+      background: #0a0a0a !important;
+      color: #fff !important;
+    }
+  }
+
+  // ── Hero ──────────────────────────────────────────
+  .orb1,
+  .orb2 {
+    display: none !important;
+  }
+
+  .hero-grid {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      ) !important;
+  }
+
+  .hero-badge {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #aaa !important;
+  }
+
+  .badge-dot {
+    background: #fff !important;
+  }
+
+  .hero-stats {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-color: #1a1a1a !important;
+  }
+
+  .hero-name,
+  .section-title,
+  .stat-num,
+  .summary-num {
+    background: #fff !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  .role-text {
+    color: #3291ff !important;
+  }
+
+  .cursor {
+    color: #0070f3 !important;
+  }
+
+  .social-link:hover {
+    color: #3291ff !important;
+    border-color: #0070f3 !important;
+    background: rgba(0, 112, 243, 0.1) !important;
+  }
+
+  // ── Cards (universal) ─────────────────────────────
+  .exp-card,
+  .edu-card,
+  .cert-card,
+  .skill-card,
+  .project-card,
+  .contact-form-col,
+  .summary-card,
+  .tech-cloud,
+  .contact-item {
+    background: #0a0a0a !important;
+    border-color: #1a1a1a !important;
+    border-radius: 6px !important;
+  }
+
+  .contact-item:hover {
+    background: #111 !important;
+    border-color: #333 !important;
+  }
+
+  .project-card:hover {
+    background: #111 !important;
+    border-color: var(--card-color, #333) !important;
+  }
+
+  .exp-card:hover,
+  .edu-card:hover,
+  .skill-card:hover {
+    background: #111 !important;
+    border-color: #333 !important;
+  }
+
+  // ── Section backgrounds ───────────────────────────
+  .skills-section,
+  .experience-section,
+  .projects-section,
+  .contact-section {
+    background: #000 !important;
+  }
+
+  // ── Accent color: blue instead of purple ──────────
+  .exp-company,
+  .edu-field,
+  .skill-pct,
+  .contact-item-value.link {
+    color: #3291ff !important;
+  }
+
+  .about-para strong,
+  .hero-desc strong {
+    color: #3291ff !important;
+  }
+
+  .highlight-chip {
+    background: rgba(0, 112, 243, 0.08) !important;
+    border-color: rgba(0, 112, 243, 0.2) !important;
+    color: #3291ff !important;
+  }
+
+  .tag {
+    background: rgba(0, 112, 243, 0.08) !important;
+    border-color: rgba(0, 112, 243, 0.15) !important;
+    color: #3291ff !important;
+  }
+
+  .filter-tab.active {
+    background: #0070f3 !important;
+    border-color: #0070f3 !important;
+    box-shadow: 0 4px 12px rgba(0, 112, 243, 0.35) !important;
+  }
+
+  .filter-tab:hover {
+    border-color: #0070f3 !important;
+    color: #3291ff !important;
+    background: rgba(0, 112, 243, 0.08) !important;
+  }
+
+  .tl-dot.active {
+    background: #0070f3 !important;
+    border-color: #0070f3 !important;
+    box-shadow: 0 0 0 4px rgba(0, 112, 243, 0.2) !important;
+  }
+
+  .skill-bar-fill {
+    background: linear-gradient(90deg, #0070f3, #3291ff) !important;
+  }
+
+  .tech-badge:hover {
+    border-color: var(--tech-color) !important;
+  }
+
+  .about-exp-badge {
+    background: #0070f3 !important;
+    box-shadow: 0 8px 20px rgba(0, 112, 243, 0.3) !important;
+  }
+
+  .about-cert-badge {
+    background: rgba(245, 158, 11, 0.1) !important;
+    border-color: rgba(245, 158, 11, 0.3) !important;
+    color: #f59e0b !important;
+  }
+
+  .project-card.featured::before {
+    background: #0070f3 !important;
+  }
+
+  // ── Availability / status ─────────────────────────
+  .availability-card {
+    background: rgba(0, 112, 243, 0.05) !important;
+    border-color: rgba(0, 112, 243, 0.2) !important;
+  }
+
+  .avail-dot {
+    background: #0070f3 !important;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.2) !important;
+  }
+
+  .avail-title {
+    color: #3291ff !important;
+  }
+
+  .current-badge {
+    color: #3291ff !important;
+    background: rgba(0, 112, 243, 0.1) !important;
+    border-color: rgba(0, 112, 243, 0.3) !important;
+  }
+
+  // ── Footer ────────────────────────────────────────
+  .footer {
+    background: #0a0a0a !important;
+    border-top-color: #1a1a1a !important;
+  }
+
+  // ── Form ──────────────────────────────────────────
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #0070f3 !important;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.12) !important;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    border-color: #1a1a1a !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+  }
+}
