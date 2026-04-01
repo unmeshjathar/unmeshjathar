@@ -1,58 +1,77 @@
 // ─── CSS Custom Properties (themeable) ───────────────────────────
 :root {
-  --primary:       #6366f1;
-  --primary-dark:  #4f46e5;
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
   --primary-light: #818cf8;
-  --secondary:     #06b6d4;
-  --accent:        #f59e0b;
-  --green:         #10b981;
-  --bg:            #0f0f13;
-  --bg-card:       #1a1a24;
+  --secondary: #06b6d4;
+  --accent: #f59e0b;
+  --green: #10b981;
+  --bg: #0f0f13;
+  --bg-card: #1a1a24;
   --bg-card-hover: #222232;
-  --text:          #e2e8f0;
-  --text-muted:    #94a3b8;
-  --border:        #2d2d3f;
-  --gradient:      linear-gradient(135deg, #6366f1, #06b6d4);
-  --shadow:        0 4px 24px rgba(99, 102, 241, 0.15);
-  --radius:        12px;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border: #2d2d3f;
+  --gradient: linear-gradient(135deg, #6366f1, #06b6d4);
+  --shadow: 0 4px 24px rgba(99, 102, 241, 0.15);
+  --radius: 12px;
 }
 
 // ─── SaaS Theme overrides ─────────────────────────────────────────
 [data-theme="saas"] {
-  --primary:       #0070f3;
-  --primary-dark:  #0061d5;
+  --primary: #0070f3;
+  --primary-dark: #0061d5;
   --primary-light: #3291ff;
-  --secondary:     #3291ff;
-  --accent:        #f59e0b;
-  --green:         #10b981;
-  --bg:            #000000;
-  --bg-card:       #0a0a0a;
+  --secondary: #3291ff;
+  --accent: #f59e0b;
+  --green: #10b981;
+  --bg: #000000;
+  --bg-card: #0a0a0a;
   --bg-card-hover: #111111;
-  --text:          #ededed;
-  --text-muted:    #888888;
-  --border:        #1a1a1a;
-  --gradient:      linear-gradient(135deg, #0070f3, #3291ff);
-  --shadow:        0 4px 24px rgba(0, 112, 243, 0.15);
-  --radius:        6px;
+  --text: #ededed;
+  --text-muted: #888888;
+  --border: #1a1a1a;
+  --gradient: linear-gradient(135deg, #0070f3, #3291ff);
+  --shadow: 0 4px 24px rgba(0, 112, 243, 0.15);
+  --radius: 6px;
+}
+
+// ─── Glass / iOS Theme ────────────────────────────────────────────
+[data-theme="glass"] {
+  --primary: #a78bfa;
+  --primary-dark: #7c3aed;
+  --primary-light: #c4b5fd;
+  --secondary: #38bdf8;
+  --accent: #fb923c;
+  --green: #34d399;
+  --bg: #0d0d1a;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.1);
+  --gradient: linear-gradient(135deg, #a78bfa, #38bdf8);
+  --shadow: 0 8px 32px rgba(167, 139, 250, 0.2);
+  --radius: 20px;
 }
 
 // ─── SCSS aliases (so existing code keeps working) ────────────────
-$primary:       var(--primary);
-$primary-dark:  var(--primary-dark);
+$primary: var(--primary);
+$primary-dark: var(--primary-dark);
 $primary-light: var(--primary-light);
-$secondary:     var(--secondary);
-$accent:        var(--accent);
-$green:         var(--green);
-$bg:            var(--bg);
-$bg-card:       var(--bg-card);
+$secondary: var(--secondary);
+$accent: var(--accent);
+$green: var(--green);
+$bg: var(--bg);
+$bg-card: var(--bg-card);
 $bg-card-hover: var(--bg-card-hover);
-$text:          var(--text);
-$text-muted:    var(--text-muted);
-$border:        var(--border);
-$gradient:      var(--gradient);
-$shadow:        var(--shadow);
-$radius:        var(--radius);
-$transition:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$text: var(--text);
+$text-muted: var(--text-muted);
+$border: var(--border);
+$gradient: var(--gradient);
+$shadow: var(--shadow);
+$radius: var(--radius);
+$transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 // ─── Mixins ──────────────────────────────────────────────────────
 @mixin gradient-text {

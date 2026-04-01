@@ -23,7 +23,6 @@
   }
 }
 
-
 [data-theme="saas"] {
   // ── Base ──────────────────────────────────────────
   body {
@@ -90,15 +89,9 @@
   }
 
   .hero-grid {
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.04) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.04) 1px,
-        transparent 1px
-      ) !important;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px) !important;
   }
 
   .hero-badge {
