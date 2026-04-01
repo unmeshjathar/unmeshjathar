@@ -193,6 +193,31 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .about-image-wrap {
+    justify-content: center;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-image-wrap {
+    padding-right: 30px;
+    padding-bottom: 50px;
+  }
+
+  .about-heading {
+    font-size: 1.3rem;
+  }
+
+  .about-highlights {
+    gap: 8px;
+  }
 }
 
 @media (max-width: 480px) {

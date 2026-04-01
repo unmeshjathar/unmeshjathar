@@ -291,3 +291,21 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .timeline-item {
+    gap: 10px;
+  }
+
+  .exp-card {
+    padding: 16px;
+  }
+
+  .summary-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .col-heading {
+    font-size: 0.95rem;
+  }
+}
