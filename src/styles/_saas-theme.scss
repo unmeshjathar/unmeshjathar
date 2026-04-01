@@ -1,5 +1,28 @@
-// ─── Modern SaaS Theme (Vercel / Linear inspired) ────────────────
-// Applied when <html data-theme="saas">
+// ─── SaaS Theme extras (things CSS vars can't handle) ────────────
+// Colors are handled via CSS custom properties in _variables.scss
+
+[data-theme="saas"] {
+  // Hide colored orbs — SaaS style is clean/flat
+  .orb1,
+  .orb2 {
+    display: none;
+  }
+
+  // Scrollbar accent
+  ::-webkit-scrollbar-thumb {
+    background: #0070f3;
+  }
+
+  // Sharp section backgrounds
+  .skills-section,
+  .experience-section,
+  .projects-section,
+  .contact-section,
+  .footer {
+    background: #000;
+  }
+}
+
 
 [data-theme="saas"] {
   // ── Base ──────────────────────────────────────────
