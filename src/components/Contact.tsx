@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect, FormEvent } from "react";
 import "./Contact.scss";
 
-const WEB3FORMS_KEY = "YOUR_ACCESS_KEY";
-
 interface FormState {
   name: string;
   email: string;
@@ -15,16 +13,10 @@ const CONTACT_ITEMS = [
     icon: "📧",
     label: "Email",
     value: "unmesh1jathar@gmail.com",
-    href: "mailto:unmesh1jathar@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=unmesh1jathar@gmail.com",
   },
   {
-    icon: "📞",
-    label: "Phone",
-    value: "+91 9922191177",
-    href: "tel:+919922191177",
-  },
-  {
-    icon: "📍",
+    icon: "",
     label: "Location",
     value: "Pune, Maharashtra – 411001",
     href: null,
@@ -44,8 +36,7 @@ export default function Contact() {
     subject: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -64,36 +55,20 @@ export default function Contact() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          name: form.name,
-          email: form.email,
-          subject: form.subject,
-          message: form.message,
-        }),
-      });
-      const data = await res.json();
-      if (data.success) {
-        setStatus("success");
-        setForm({ name: "", email: "", subject: "", message: "" });
-        setTimeout(() => setStatus("idle"), 5000);
-      } else {
-        setErrorMsg(data.message || "Submission failed.");
-        setStatus("error");
-        setTimeout(() => setStatus("idle"), 5000);
-      }
-    } catch {
-      setErrorMsg("Network error. Please email unmesh1jathar@gmail.com directly.");
-      setStatus("error");
-      setTimeout(() => setStatus("idle"), 5000);
-    }
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    );
+    const subject = encodeURIComponent(form.subject);
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=unmesh1jathar@gmail.com&su=${subject}&body=${body}`,
+      "_blank"
+    );
+    setStatus("success");
+    setForm({ name: "", email: "", subject: "", message: "" });
+    setTimeout(() => setStatus("idle"), 5000);
   };
 
   return (
@@ -209,12 +184,7 @@ export default function Contact() {
 
               {status === "success" && (
                 <div className="form-success">
-                  ✅ Message sent! I'll get back to you within 24 hours.
-                </div>
-              )}
-              {status === "error" && (
-                <div className="form-error">
-                  ❌ {errorMsg}
+                  ✅ Gmail opened! Review and hit Send to reach me.
                 </div>
               )}
 

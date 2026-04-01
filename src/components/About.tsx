@@ -110,10 +110,6 @@ export default function About() {
                 <span className="info-value">📧 unmesh1jathar@gmail.com</span>
               </div>
               <div className="info-item">
-                <span className="info-label">Phone</span>
-                <span className="info-value">📞 +91 9922191177</span>
-              </div>
-              <div className="info-item">
                 <span className="info-label">Status</span>
                 <span className="info-value available">
                   ✅ Open to Opportunities

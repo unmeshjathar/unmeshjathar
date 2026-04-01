@@ -277,7 +277,6 @@ export default function Experience() {
                 {[
                   { num: "3.7+", label: "Years Exp." },
                   { num: "4", label: "Enterprise Clients" },
-                  { num: "90%", label: "Test Coverage" },
                   { num: "100%", label: "Bug Resolution" },
                 ].map((s) => (
                   <div key={s.label} className="summary-stat">
