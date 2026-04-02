@@ -141,8 +141,8 @@ export default function Hero() {
             Email Me
           </a>
           <a
-            href={`${import.meta.env.BASE_URL}img/Unmesh_Jathar_ReactJS.pdf`}
-            download="Unmesh_Jathar_ReactJS.pdf"
+            href={`${import.meta.env.BASE_URL}img/Unmesh_Jathar_Resume.pdf`}
+            download="Unmesh_Jathar_Resume.pdf"
             className="btn btn-outline"
           >
             <svg
