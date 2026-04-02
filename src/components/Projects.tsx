@@ -123,6 +123,7 @@ export default function Projects() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          sectionRef.current?.classList.add("visible");
           filtered.forEach((_, i) => {
             setTimeout(() => setVisible((prev) => [...prev, i]), i * 100);
           });
