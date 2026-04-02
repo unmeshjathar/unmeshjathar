@@ -8,6 +8,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "predeploy": "tsc && vite build --base=/unmesh-portfolio/",
     "deploy": "gh-pages -d dist"
   },
@@ -17,12 +19,19 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@module-federation/vite": "^1.14.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^4.1.2",
     "gh-pages": "^6.3.0",
+    "jsdom": "^29.0.1",
     "sass": "^1.71.1",
     "typescript": "^5.3.3",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "vitest": "^4.1.2"
   }
 }
