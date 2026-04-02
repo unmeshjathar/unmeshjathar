@@ -101,14 +101,23 @@
     left: -100%;
     width: 60%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
     animation: barGleam 2.5s ease-in-out infinite 1.2s;
   }
 }
 
 @keyframes barGleam {
-  0%   { left: -60%; }
-  100% { left: 160%; }
+  0% {
+    left: -60%;
+  }
+  100% {
+    left: 160%;
+  }
 }
 
 // Tech cloud
@@ -148,7 +157,9 @@
   &:hover {
     border-color: var(--tech-color);
     transform: translateY(-3px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 12px color-mix(in srgb, var(--tech-color) 25%, transparent);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.2),
+      0 0 12px color-mix(in srgb, var(--tech-color) 25%, transparent);
     background: rgba(255, 255, 255, 0.06);
     .tech-name {
       color: $text;

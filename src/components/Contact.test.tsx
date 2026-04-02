@@ -3,7 +3,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import Contact from "./Contact";
 
 beforeEach(() => {
-  global.fetch = vi.fn().mockResolvedValue({
+  globalThis.fetch = vi.fn().mockResolvedValue({
     json: async () => ({ success: true }),
   } as Response);
 });
@@ -68,7 +68,7 @@ describe("Contact", () => {
     });
     fireEvent.click(screen.getByText("Send Message"));
     await waitFor(() =>
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(globalThis.fetch).toHaveBeenCalledWith(
         "https://api.web3forms.com/submit",
         expect.objectContaining({ method: "POST" }),
       ),

@@ -23,7 +23,6 @@ button:focus-visible {
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
 }
 
 body {
@@ -35,14 +34,10 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden;
   transition:
     background 0.3s ease,
     color 0.3s ease;
-  cursor: none;
-}
-
-a, button, [role="button"], input, textarea, select, label {
-  cursor: none;
 }
 
 a {
@@ -139,8 +134,14 @@ section {
 
 // ─── Premium: smooth page reveal ─────────────────────────────────
 @keyframes pageReveal {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 body {
   animation: pageReveal 0.6s ease both;
@@ -149,29 +150,18 @@ body {
 // ─── Premium: glow cursor highlight ──────────────────────────────
 .cursor-glow {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(167,139,250,0.06) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.06) 0%,
+    transparent 70%
+  );
   pointer-events: none;
+  transform: translate(-50%, -50%);
   z-index: 0;
-  will-change: transform;
-}
-
-// ─── Rocket cursor ────────────────────────────────────────────────
-.cursor-rocket {
-  position: fixed;
-  top: 0;
-  left: 0;
-  font-size: 1.4rem;
-  pointer-events: none;
-  z-index: 99999;
-  filter: drop-shadow(0 0 6px rgba(167, 139, 250, 0.7));
-  line-height: 1;
-  user-select: none;
-  will-change: transform;
+  transition: transform 0.08s linear;
 }
 
 // ─── Premium section title with glowing underline ────────────────
@@ -202,8 +192,12 @@ body {
 
 // ─── Premium: shimmer card hover ─────────────────────────────────
 @keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .skill-card,
@@ -262,13 +256,14 @@ body {
 
 // ─── Premium: section fade-in on scroll ──────────────────────────
 .about-grid,
-
 .projects-grid,
 .exp-layout,
 .contact-grid {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 
   &.visible {
     opacity: 1;

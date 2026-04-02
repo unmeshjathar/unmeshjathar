@@ -1,10 +1,10 @@
 {
   "latestErrorEvent": {
     "code": "TYPE-001",
-    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"npx tsc --project \\\"F:\\\\\\\\unmesh website\\\\\\\\node_modules\\\\\\\\.federation\\\\\\\\tsconfig.95304f4fc880932efb8b5903f06821f5.json\\\"\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"npx tsc --project \\\"F:\\\\\\\\unmesh website\\\\\\\\node_modules\\\\\\\\.federation\\\\\\\\tsconfig.32a682903a6f332cf626a53bb566e3a3.json\\\"\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
     "args": {
-      "cmd": "npx tsc --project \"F:\\\\unmesh website\\\\node_modules\\\\.federation\\\\tsconfig.95304f4fc880932efb8b5903f06821f5.json\""
+      "cmd": "npx tsc --project \"F:\\\\unmesh website\\\\node_modules\\\\.federation\\\\tsconfig.32a682903a6f332cf626a53bb566e3a3.json\""
     },
-    "timestamp": 1775130707655
+    "timestamp": 1775133336947
   }
 }

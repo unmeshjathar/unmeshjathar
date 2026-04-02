@@ -57,8 +57,17 @@
 }
 
 @keyframes avatarPulse {
-  0%, 100% { opacity: 0.25; filter: blur(12px); transform: scale(1); }
-  50%       { opacity: 0.5;  filter: blur(18px); transform: scale(1.04); }
+  0%,
+  100% {
+    opacity: 0.25;
+    filter: blur(12px);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(18px);
+    transform: scale(1.04);
+  }
 }
 
 .about-exp-badge {
